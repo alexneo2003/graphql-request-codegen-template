@@ -1,0 +1,27 @@
+query Suites($skip: Int, $limit: Int, $title: String) {
+  getSuites(skip: $skip, limit: $limit, title: $title) {
+    _id
+    createdAt
+    description
+    suites {
+      _id
+      title
+    }
+    tests {
+      _id
+      title
+    }
+    updatedAt
+  }
+}
+
+query Users {
+  users {
+    _id
+    createdAt
+    updatedAt
+    email
+    firstName
+    lastName
+  }
+}
